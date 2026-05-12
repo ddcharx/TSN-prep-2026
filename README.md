@@ -10,7 +10,7 @@ in the area of Time-Sensitive Networking.
 
 ## Structure
 - `papers/`     — Reading notes on TSN papers
-- `experiments/` — OMNeT++ INET configurations and results
+- `experiments/` — OMNeT++ INET programs
 - `glossary.md` — TSN terminology
 - `to-do-list.md` — Daily progress log
 
