@@ -1,0 +1,109 @@
+🎯 目标 1：TSN 背景（为以后写论文补充知识）
+Zhou 综述本身就给了你 TSN 的整体地图——补充的话3 篇足够：
+[21] N. Finn - "Introduction to Time-Sensitive Networking"（IEEE Communications Standards Magazine, 2018）
+
+TSN 入门经典——Finn 是 IEEE 802.1 TSN 工作组主席，亲自写的 intro
+短（6 页），易读，覆盖 TSN 是什么、为什么需要、核心机制
+建议：精读 1 遍。读完这篇 + Zhou 综述第 III.B 节 = TSN 基础到位
+
+[41] Nasrallah et al. - "Ultra-Low Latency (ULL) Networks: IEEE TSN and IETF DetNet Standards"（IEEE COMST, 2018）
+
+TSN 第一篇 comprehensive survey
+比 Zhou 那篇早，但覆盖IEEE TSN + IETF DetNet 两个标准——DetNet 是 layer 3 deterministic networking，Zhou 那篇没怎么讲
+建议：选读——只读 intro + DetNet 相关章节（约 1 小时）
+
+[42] Zhang et al. - "Time-Sensitive Networking (TSN) for Industrial Automation"（ACM Computing Surveys, 2024）
+
+工业自动化视角的 TSN survey
+跟你 KAYTUS 服务器嵌入式背景特别契合——讲 TSN 怎么用在工厂
+建议：选读——abstract + intro + 工业应用案例那几节（1 小时）
+
+这 3 篇加起来 4-5 小时，TSN 背景就充足了。
+
+🎯 目标 2：thesis 题目方向强相关
+这一组是优先级最高的——直接对应 Debnath 的"ML/LLM in TSN"方向。
+LLM-related（你的 thesis 大概率涉及）
+[177] Mekrache et al. - "Intent-Based Management of Next-Generation Networks: An LLM-Centric Approach"（IEEE Network, 2024）
+
+用 LLM 翻译自然语言意图 → 网络配置
+跟 Debnath 那篇 LLM preprint 是同一思想路线，但 LLM 在 5G slicing 应用，不是 TSN
+读后能让你理解"LLM in networking"的标准玩法
+建议：精读（abstract + 整体框架 figure + 评估结果）
+
+[178] Windmann et al. - "NetPilot: LLM-Assisted Configuration of Hybrid TSN/5G Networks"（ETFA 2025）
+
+直接相关：LLM + TSN/5G 配置
+RAG 架构（LLM 检索 NETCONF/YANG 模型生成配置）
+如果 Debnath 的 thesis 题目方向是 LLM 做 TSN 配置生成，这篇是 baseline
+建议：精读
+
+[212] Zheng et al. - "Large Language Model-Enabled Reinforcement Learning for Wireless Network Optimization"（IEEE Communications Magazine, 2026）
+
+LLM 在 RL pipeline 里的几种角色（feature extractor / reward designer / policy interpreter / decision-maker）
+是方法论而非具体应用，帮你理解"LLM 怎么和 RL 结合"
+建议：精读——这一篇能让你回答"LLM 在 thesis 里到底扮演什么角色"
+
+ML for TSN（基础线，必读）
+[28] Prados-Garzon et al. - "LEARNET: RL-based Flow Scheduling for Asynchronous Deterministic Networks"（ICC 2020）
+
+RL+TSN 领域的奠基论文之一
+用 RL 做 ATS-based 异步 TSN 流量调度
+短（6 页），ICC paper 标准长度
+建议：精读——理解 RL+TSN 经典 MDP formulation
+
+[31] He et al. - "DeepScheduler: Enabling Flow-aware Scheduling in TSN"（INFOCOM 2023）
+
+DRL + flow-aware TSN scheduling
+36% schedulability 提升 + 150× 速度——里程碑式结果
+工程化做得很好（实际跑在 FPGA testbed 上）
+建议：精读——这是 ML for TSN 经典工作
+
+[92] Li et al. - "DecAge: Decentralized Flow Scheduling for Industrial 5G and TSN Integrated Networks"（IEEE TNSE 2023）
+
+MARL + 5G-TSN——分布式 age-aware 调度
+跟 Debnath 自己的 5GTQ 工作有方向重合
+建议：选读——abstract + 系统架构 figure + 实验结果
+
+边缘探索（看时间）
+[148] Yang et al. - "DetFed: Deterministic Federated Learning over TSN"（IEEE TMC 2024）
+
+federated learning + TSN（FL 模型更新通过 TSN 传输）
+跟你 thesis 可能不直接相关，但展示了"特定 ML workload + TSN" co-design 的范式
+建议：只读 abstract——知道有这种工作就行
+
+
+
+按她给你的方向（ML/LLM in TSN）和你 1 周的时间预算排序：
+🔴 必读 Top 2
+1. Introducing Large Language Models into the Design Flow of Time Sensitive Networking（2025 preprint, arXiv）
+这是你的 #1 必读 paper。理由：
+
+完全对应她邮件里说的 "ML and LLM in TSN" 方向——这就是她当前主线
+arXiv 免费，不需要 TUM VPN
+2025 preprint = 她最新的研究方向，6/10 跟她 sync 时她可能直接基于这篇展开
+看完这篇你能直接回答"你想做哪个 sub-direction"
+
+读法建议：精读。每一节都要看明白。这篇 paper 大概率就是她想让你做的题目的 baseline 或起点。
+2. Learning-Based Traffic Classification for Mixed-Critical Flows in TSN（ICC 2025）
+第二必读。理由：
+
+"Learning-Based" = ML 应用到 TSN，跟她说的 "ML" 方向直接对接
+比 LLM paper 更基础——理解传统 ML 在 TSN 里怎么用
+看完这篇 + LLM paper，你对她"ML/LLM in TSN"的全貌就有概念
+ICC = 顶会，paper 短（6-8 页），1-2 小时能精读完
+
+读法建议：精读，重点看她怎么设计 state/feature/label，怎么 evaluate。
+🟡 应该看（理解她的技术基础）
+3. Towards an Optimized Multi-Cyclic Queuing and Forwarding...（IoT Journal 2025）
+MCQF 是她研究的核心 shaper。你之前那篇 Zhou 综述里也反复提到 CQF/MCQF。理由：
+
+这是她最近的纯 TSN 工作——展示她不用 ML 时的研究风格
+帮你理解她调度方法的技术底层
+Journal paper 较长（18 页），可以只读 abstract + intro + figures + conclusion（不需要全篇精读）
+
+4. CyclicSim: Comprehensive Evaluation of Cyclic Shapers in TSN（CCNC 2025）
+有 GitHub 代码！ github.com/tum-esi/CyclicSim
+
+这是她 lab 的仿真工具——你做 thesis 大概率要用
+看 GitHub README + 几个 example 就行，paper 本身简单浏览即可
+重要：你装 OMNeT++ 之后可以 clone 这个 repo 跑一下她的 example——比自己摸索 INET 自带的 TSN example 更对口她的工作流
