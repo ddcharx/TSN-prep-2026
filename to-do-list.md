@@ -13,7 +13,8 @@ Self-directed TSN preparation. Goal: build up the broader TSN background, send s
 
 ## Wednesday, May 13
 - [ ] Finish https://docs.omnetpp.org/tutorials/tictoc 
-- [X] Second-pass read of recommended paper with glossary
+    - [X] Completed up to 5.1
+- [X] Second-pass read of recommended paper with glossary, notes in `papers/
 - [ ] Read 2 of supervisor's own publications from her page while building glossary
 - [ ] Complete PyTorch 60-Minute Blitz tutorial
 
