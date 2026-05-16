@@ -4,7 +4,7 @@ in the area of Time-Sensitive Networking.
 
 ## Timeline
 - Started:2026.5.11
-- Target supervisor sync: 2026.5.15
+- Target supervisor sync: before 2026.5.17
 - Goal: Build TSN foundation, set up OMNeT++/INET, read key literature,
   and identify focused research direction.
 
