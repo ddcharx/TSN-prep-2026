@@ -10,10 +10,10 @@ Self-directed TSN/LLM preparation. Goal: build up the broader TSN/LLM background
 
 
 ## Phase 2: Wider Reading & Hands-on Experiments
-- [ ] Learn https://docs.omnetpp.org/tutorials/tictoc 
+- [X] Learn https://docs.omnetpp.org/tutorials/tictoc 
     - [X] Completed up to 3.6
     - [X] Completed up to 5.1
-    - [ ] Completed
+    - [X] Completed
 - [X] Second-pass read of recommended paper with glossary, notes in `papers/
 - [X] Read 2 of supervisor's own publications from her page
 
